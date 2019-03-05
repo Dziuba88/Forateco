@@ -10,7 +10,7 @@ html(lang="zxx")
     link(rel="stylesheet", href="css/styles.min.css")
   body
     .navbar: .container: .navbar--wraper
-      .navbar__brand: a(href=""): img(src="img/brand.png", alt="Forateco")
+      .navbar__brand: a(href=""): img(src="img/brand.png", alt="Forateco logo")
       .navbar__separator
       .navbar__nav: ul.mainmenu
         li.mainmenu__item(class=pageName === 'Main' ? 'current' : ''): a(href="001_main.html") Главная
@@ -19,7 +19,65 @@ html(lang="zxx")
         li.mainmenu__item(class=pageName === 'Contacts' ? 'current' : ''): a(href="") Контакты
       .navbar__lang: a(href="", title="In Romana") Ro
     block content
+    footer.footer: .container
+      .row
+        .col.md-6: .footer__nav
+          h3 Услуги
+          .row
+            .col.sm-6: ul.footer--menu
+              li(): a(href="") Сваи Буронабивные - ZIL
+              li(): a(href="") Сваи Буронабивные - Bower
+              li(): a(href="") Микро сваи
+              li(): a(href="") Укрепление фундамента
+            .col.sm-6: ul.footer--menu
+              li(): a(href="") Анкерные укрепления
+              li(): a(href="") Геотермальные скважены
+              li(): a(href="") Артезианские скважены
+              li(): a(href="") Песковые  скважены
+        .col.md-3.sm-6: .footer__nav
+          h3 карта сайта
+          ul.footer--menu
+            li(): a(href="") Главная
+            li(): a(href="") Услуги
+            li(): a(href="") О компании
+            li(): a(href="") Контакты
+        .col.md-3.sm-6: .footer__nav
+          h3 Контакты
+          ul.footer--contacts
+            li
+              svg.icon: use(xlink:href="#map_marker")
+              span Молдова, Кишинев,<br>Балканское шоссе, 9
+            li
+              svg.icon: use(xlink:href="#mobile")
+              a(href="tel:+37368033887") +(373) 68 033 887
+            li
+              svg.icon: use(xlink:href="#envelope")
+              a(href="mailto:artiomradu@yahoo.com") artiomradu@yahoo.com
+      .footer__bottom: .row
+        .col.md-6.footer__bottom--copyrights
+          a.footer--brand(href=""): img(src="img/brand_light.png", alt="Forateco logo")
+          span Copyright © 2018. Все права защищены
+        .col.md-6.footer__bottom--tools
+          .footer--lang
+            span Язык: 
+            .dropdown
+              .dropdown--toggle(data-toggle="dropdown")
+                span Русский
+                svg.icon: use(xlink:href="#caret")
+              .dropdown--menu: ul
+                li.active: a(href="") Русский
+                li(): a(href="") Română
+          .footer--social: ul
+            li(): a(href=""): svg.icon: use(xlink:href="#facebook")
+            li(): a(href=""): svg.icon: use(xlink:href="#twitter")
+            li(): a(href=""): svg.icon: use(xlink:href="#instagram")
+          .footer--share
+            button
+              svg.icon: use(xlink:href="#thumbs_up")
+              span Нравится
+            button
+              span Подельться
+
     script(src="js/jquery.min.js")
-    script(src="js/main.min.js")
     script(src="js/app.min.js")
     

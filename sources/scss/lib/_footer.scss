@@ -1,0 +1,257 @@
+.footer {
+  color: #ffffff;
+  background-color: #2d2a26;
+  padding-top: 40px;
+
+  &__nav {
+    padding: 20px 0;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 1;
+      margin: 0 0 15px;
+      color: #ff9f1a;
+    }
+  }
+
+  &--menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 0 10px 15px;
+
+      &:before {
+        content: '·';
+        color: #ff9f1a;
+        margin-left: -15px;
+        width: 15px;
+        display: inline-block;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+
+        &:hover {
+          color: #ff9f1a;
+        }
+      }
+    }
+  }
+  &--contacts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 0 10px 30px;
+
+      .icon {
+        line-height: 20px;
+        color: #ff9f1a;
+        fill: #ff9f1a;
+        margin-left: -30px;
+        margin-right: 14px;
+        vertical-align: top;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+
+        &:hover {
+          color: #ff9f1a;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 15px 0;
+    border-top: 1px solid rgba(#ffffff, 0.1);
+
+    &--copyrights,
+    &--tools {
+      display: flex;
+      align-items: center;
+    }
+
+    &--copyrights {
+      .footer--brand {
+        display: block;
+        flex: none;
+        transition: 0.15s linear;
+
+        img {
+          display: block;
+        }
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+      span {
+        flex: 1;
+        text-align: center;
+        line-height: 1;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &--lang {
+    flex: none;
+    span,
+    .dropdown {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .dropdown {
+      position: relative;
+      &--toggle {
+        cursor: pointer;
+        color: #ff9f1a;
+        transition: 0.15s linear;
+        padding: 0 15px 0 0;
+        line-height: 20px;
+        position: relative;
+
+        span,
+        .icon {
+          display: inline-block;
+          line-height: 20px;
+          vertical-align: middle;
+        }
+
+        .icon {
+          transition: 0.15s linear;
+        }
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+
+      &--menu {
+        position: absolute;
+        transform: scale(0);
+        left: 0;
+        bottom: 100%;
+        opacity: 0;
+      }
+
+      &.open {
+        .dropdown--toggle {
+          color: #ffffff;
+
+          .icon {
+            transform: rotate(180deg);
+          }
+        }
+        .dropdown--menu {
+          opacity: 1;
+          transform: scale(1);
+          background-color: #ffffff;
+          padding: 4px 0;
+          border-radius: 4px;
+          margin-bottom: 5px;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+              a {
+                display: block;
+                text-decoration: none;
+                color: #2d2a26;
+                padding: 5px 15px;
+                line-height: 20px;
+              }
+
+              &.active a,
+              a:hover {
+                color: #ff9f1a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &--social {
+    flex: 1;
+    text-align: center;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-flex;
+
+      li {
+        display: block;
+        padding: 0 10px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          border: 1px solid currentColor;
+          text-decoration: none;
+          width: 30px;
+          height: 30px;
+          color: #ffffff;
+          transition: 0.15s linear;
+
+          .icon {
+            display: block;
+          }
+
+          &:hover {
+            color: #ff9f1a;
+          }
+        }
+      }
+    }
+  }
+  &--share {
+    button {
+      margin-left: 5px;
+      border-radius: 4px;
+      background-color: #3453a5;
+      color: #ffffff;
+      transition: 0.15s linear;
+      line-height: 24px;
+      padding: 0 10px;
+      font-size: 11px;
+      border: none;
+      cursor: pointer;
+
+      span {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle;
+      }
+      .icon {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        background-color: #253a73;
+      }
+    }
+  }
+}

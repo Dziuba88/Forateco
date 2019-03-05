@@ -4,7 +4,8 @@
   top: 0;
   right: 0;
   background-color: rgba(#ffffff, 0);
-  transition: 0.25s ease-in-out;
+  //transition: 0.25s ease-in-out;
+  z-index: 99;
 
   &--wraper {
     display: flex;

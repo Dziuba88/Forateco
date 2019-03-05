@@ -8,8 +8,6 @@ body {
   font-size: 16px;
   line-height: 1.375;
   font-weight: 400;
-  min-height: 300vh;
-  position: relative;
 }
 
 h1,
@@ -18,4 +16,13 @@ h3,
 h4,
 h5 {
   font-family: $RussoOne;
+  font-weight: 400;
+}
+
+.icon {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
 }
