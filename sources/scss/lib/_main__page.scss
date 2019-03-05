@@ -1,0 +1,21 @@
+.b__main {
+  &--header {
+    padding-top: 160px;
+    background: url(../img/sky_bg.png) no-repeat top center;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 100px;
+      line-height: 1;
+      color: #2d2a26;
+      text-transform: uppercase;
+      user-select: none;
+
+      span {
+        display: block;
+        color: #ff9f1a;
+      }
+    }
+  }
+}

@@ -1,5 +1,9 @@
-html,
-body {
-  font-family: 'Russo One', sans-serif;
-  font-family: 'Fira Sans', sans-serif;
-}
+@import 'lib/variables';
+@import 'lib/normalize';
+@import 'lib/grid';
+@import 'lib/global';
+
+// components
+@import 'lib/navbar';
+
+@import 'lib/main__page';

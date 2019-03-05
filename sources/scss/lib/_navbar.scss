@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(#ffffff, 0);
+  transition: 0.25s ease-in-out;
+
+  &--wraper {
+    display: flex;
+    align-items: center;
+  }
+  &__separator {
+    flex: 1;
+  }
+  &__brand {
+    flex: none;
+    a {
+      display: block;
+      img {
+        display: block;
+        height: 50px;
+        transition: 0.25s ease-in-out;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+  &__nav {
+    flex: none;
+  }
+  &__lang {
+    padding-left: 15px;
+    a {
+      display: block;
+      width: 34px;
+      height: 34px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #ff9f1a;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 34px;
+      text-decoration: none;
+      transition: 0.25s ease-in-out;
+
+      &:hover {
+        background-color: #2d2a26;
+      }
+    }
+  }
+
+  .mainmenu {
+    display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &__item {
+      display: block;
+      flex: none;
+
+      a {
+        display: block;
+        padding: 35px 15px;
+        text-decoration: none;
+        color: #2d2a26;
+        transition: 0.25s ease-in-out;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          display: block;
+          content: '';
+          left: 15px;
+          right: 15px;
+          top: 0;
+          transform: scaleX(0);
+          transform-origin: top left;
+          height: 3px;
+          background-color: #ff9f1a;
+          transition: 0.25s ease-in-out;
+        }
+      }
+      &.current a,
+      a:hover {
+        color: #ff9f1a;
+        &:after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    background-color: rgba(#ffffff, 1);
+    box-shadow: 0 1px 3px rgba(#000000, 0.15);
+
+    .mainmenu__item a {
+      padding: 25px 15px;
+    }
+    .navbar__brand a img {
+      height: 40px;
+    }
+  }
+}

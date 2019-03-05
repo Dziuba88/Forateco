@@ -1,0 +1,171 @@
+$columns: 12 !default;
+$gutter: 30px !default;
+
+$mobile-max: 768px !default; // Set xs breakpoint's max width
+$tablet-max: 970px !default; // Set md breakpoint's max width
+$desktop-max: 1200px !default; // Set lg breakpoint's max width
+
+$tablet-start: ($mobile-max + 1); // Generate sm breakpoint's min width
+$desktop-start: ($tablet-max + 1); // Generate md breakpoint's min width
+$lagre-start: ($desktop-max + 1); // Generate xl breakpoint's min width
+// mobile 768px and down
+// tablet 769 - 1000px
+// desktop 1000 - 1200px
+// large 1200px and up
+// Breakpoints
+@mixin mobile {
+  @media only screen and (max-width: #{$mobile-max}) {
+    @content;
+  }
+}
+@mixin tablet-up {
+  @media only screen and (min-width: #{$tablet-start}) {
+    @content;
+  }
+}
+@mixin tablet-down {
+  @media only screen and (max-width: #{$tablet-max}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet-start}) and (max-width: #{$tablet-max}) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media only screen and (min-width: #{$desktop-start}) {
+    @content;
+  }
+}
+@mixin desktop-down {
+  @media only screen and (max-width: #{$desktop-max}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-start}) and (max-width: #{$desktop-max}) {
+    @content;
+  }
+}
+@mixin large-down {
+  @media only screen and (max-width: #{$desktop-max}) {
+    @content;
+  }
+}
+@mixin large {
+  @media only screen and (min-width: #{$lagre-start}) {
+    @content;
+  }
+}
+
+@function colWidth($num) {
+  @return $num / $columns * 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 ($gutter / 2);
+
+  @include large {
+    width: $desktop-max;
+  }
+  @include desktop {
+    width: $tablet-max;
+  }
+  @include tablet {
+    width: $mobile-max;
+  }
+  @include mobile {
+    width: 100%;
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 ($gutter / -2);
+}
+.col {
+  margin: 0;
+  padding: 0 ($gutter / 2);
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  min-width: 0;
+
+  &.xs {
+    @for $i from 1 through $columns {
+      &-#{$i} {
+        flex: 0 0 colWidth($i);
+      }
+    }
+  }
+
+  &.off-xs {
+    @for $i from 1 through $columns {
+      &-#{$i} {
+        margin-left: colWidth($i);
+      }
+    }
+  }
+
+  @include tablet-up {
+    &.sm {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          flex: 0 0 colWidth($i);
+        }
+      }
+    }
+
+    &.off-sm {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include desktop-up {
+    &.md {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          flex: 0 0 colWidth($i);
+        }
+      }
+    }
+
+    &.off-md {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
+        }
+      }
+    }
+  }
+
+  @include large {
+    &.lg {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          flex: 0 0 colWidth($i);
+        }
+      }
+    }
+
+    &.off-lg {
+      @for $i from 1 through $columns {
+        &-#{$i} {
+          margin-left: colWidth($i);
+        }
+      }
+    }
+  }
+}
