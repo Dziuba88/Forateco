@@ -66,6 +66,105 @@
   }
 }
 .services__descrition {
-  background-color: #000000;
+  background: url(../img/serv_description_bg.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 60px 0;
+  h2 {
+    margin: 0 0 30px;
+    color: #2d2a26;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    .accent {
+      color: #ff9f1a;
+    }
+
+    .icon {
+      display: block;
+      width: 163px;
+      height: 16px;
+      margin: 20px auto;
+    }
+  }
+
+  &--text {
+    margin-bottom: 60px;
+    p {
+      margin: 0 0 1.375em;
+      text-align: center;
+
+      &.text--center {
+        margin: -1.375em 0 0;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &--gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      display: block;
+      flex: none;
+      width: 25%;
+      background-color: #2d2a26;
+      position: relative;
+      color: #ffffff;
+      text-decoration: none;
+      backface-visibility: hidden;
+      overflow: hidden;
+
+      img {
+        backface-visibility: hidden;
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        transition: 0.25s ease-in-out;
+      }
+
+      .overlay {
+        display: flex;
+        font-display: c;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#2d2a26, 0.8) url(../img/dot_bg.png) center center;
+        z-index: 2;
+        transition: 0.25s ease-in-out;
+        opacity: 0;
+        .icon {
+          font-size: 40px;
+          display: block;
+        }
+        small {
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &:hover a {
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+        img {
+          transform: scale(1.25);
+          filter: grayscale(1);
+          //opacity: 0.2;
+        }
+      }
+    }
+  }
 }

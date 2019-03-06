@@ -18,8 +18,33 @@ block content
       .col.md-4: img.services__about--image(src="img/service_about.png", alt="")
 
   section.services__descrition: .container
-    -for(i=1;i<=10;i++)
-      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium ipsum aperiam laborum nostrum aliquam quas inventore saepe deleniti neque, molestiae dolore minus ipsam placeat repudiandae itaque dolores. Natus, pariatur.
-
-  -for(i=1;i<=100;i++)
-    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium ipsum aperiam laborum nostrum aliquam quas inventore saepe deleniti neque, molestiae dolore minus ipsam placeat repudiandae itaque dolores. Natus, pariatur.
+    h2 <span class="accent">Буронабивные</span> сваи
+      svg.icon: use(xlink:href="#slash_1")
+    .row: .col.md-10.off-md-1: .services__descrition--text
+      p Это один из способов организации фундамента строящегося здания. Такого рода сваи применимы для строительства зданий любого назначения, будь то сооружения жилого, общественного или производственного типа.
+      p Основанием для железобетонной буронабивной сваи являются гравийно-галечниковые отложения, пески и горные породы различных типов. Данный вид сваи можно использовать практических на всех грунтах, за исключением крупнообломочных и скальных.
+      p.text--center \
+      p Динамическая нагрузка является одной из наиболее важных и серьезных проблем, с которыми приходится сталкиваться при строительстве зданий на фундаментах из сваи железобетонной при условиях уплотненных городских застроек. Технология установки железобетонной буронабивной сваи представляет разумное решение данной проблемы. Такие сваи железобетонные являются лучшим вариантом для возведения строительных сооружений в местах со сложными геологическими условиями, а также при больших горизонтальных и вертикальных нагрузках.
+    .services__descrition--gallery: -for(i=1;i<=12;i++)
+      a.gallery__item(href="http://placeimg.com/960/540/tech/"+i, title="Заготовок ФОТО "+i)
+        img(src="http://placeimg.com/320/180/tech/"+i, alt="")
+        span.overlay: svg.icon: use(xlink:href="#zoom")
+  section.main__services: .container
+    h2 <span class="accent">другие</span> услуги
+      svg.icon: use(xlink:href="#slash_1")
+    .row
+      .col.sm-6.md-3: a.main__services--item(href="")
+        span.thumb
+          img(src="img/serv_1.jpg", alt="service image")
+          span.overlay: svg.icon: use(xlink:href="#serv_1")
+        span.title Сваи Буронабивные<br>Техника ZIL
+      .col.sm-6.md-3: a.main__services--item(href="")
+        span.thumb
+          img(src="img/serv_2.jpg", alt="service image")
+          span.overlay: svg.icon: use(xlink:href="#serv_2")
+        span.title Артезианскае скважины
+      .col.sm-6.md-3: a.main__services--item(href="")
+        span.thumb
+          img(src="img/serv_4.jpg", alt="service image")
+          span.overlay: svg.icon: use(xlink:href="#serv_4")
+        span.title МикроСваи<br>и Анкера
