@@ -41,24 +41,42 @@ block content
     .row
       .col.sm-6.md-3: a.main__services--item(href="")
         span.thumb
-          img(src="img/serv_1.jpg", alt="")
+          img(src="img/serv_1.jpg", alt="service image")
           span.overlay: svg.icon: use(xlink:href="#serv_1")
         span.title Сваи Буронабивные<br>Техника ZIL
       .col.sm-6.md-3: a.main__services--item(href="")
         span.thumb
-          img(src="img/serv_2.jpg", alt="")
+          img(src="img/serv_2.jpg", alt="service image")
           span.overlay: svg.icon: use(xlink:href="#serv_2")
         span.title Артезианскае скважины
       .col.sm-6.md-3: a.main__services--item(href="")
         span.thumb
-          img(src="img/serv_3.jpg", alt="")
+          img(src="img/serv_3.jpg", alt="service image")
           span.overlay: svg.icon: use(xlink:href="#serv_3")
         span.title Сваи Буронабивные<br>Техника bower
       .col.sm-6.md-3: a.main__services--item(href="")
         span.thumb
-          img(src="img/serv_4.jpg", alt="")
+          img(src="img/serv_4.jpg", alt="service image")
           span.overlay: svg.icon: use(xlink:href="#serv_4")
         span.title МикроСваи<br>и Анкера
-
-
-
+  section.main__about
+    video(autoplay='', loop='', poster='video/about_video.jpg', muted='').main__about--video
+      source(src='video/about_video.mp4', type='video/mp4')
+      source(src="video/about_video.webm", type="video/webm")
+    .container
+      svg.icon.main__about--start: use(xlink:href="#slash_2")
+      .row
+        .col.md-5.off-md-1.sm-6
+          h2 <span class="accent">О</span> Компании
+            svg.icon: use(xlink:href="#slash_3")
+          p Мы одна из ведущих и динамично развивающихся строительных компаний. Мы работаем на рынке строительных услуг более 20 лет. Основным направлением деятельности нашей компании является предоставление <a href="">буровых услуг</a>.
+        .col.sm-6.main__about--brand: img(src="img/brand_square.png", alt="Forateco logo")
+      svg.icon.main__about--stops: use(xlink:href="#slash_2")
+  section.main__clients: .container
+    h2 <span class="accent">Наши</span> доверяют
+      svg.icon: use(xlink:href="#slash_1")
+    .owl-carousel.clients: - for(i=1;i<=6;i++)
+      .clients__item: a(href=""): img(src="img/client_1.jpg", alt="client logo")
+      .clients__item: a(href=""): img(src="img/client_2.png", alt="client logo")
+      .clients__item: a(href=""): img(src="img/client_3.jpg", alt="client logo")
+      .clients__item: a(href=""): img(src="img/client_4.jpg", alt="client logo")
