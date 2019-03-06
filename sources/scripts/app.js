@@ -3387,7 +3387,7 @@ $(document).ready(function() {
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
       titleSrc: function(item) {
-        return item.el.attr('title') + '<small>автор: Forateco</small>';
+        return item.el.attr('title') + '<small>Forateco Portfolio</small>';
       }
     }
   });
