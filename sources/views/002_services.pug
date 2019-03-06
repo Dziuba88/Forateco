@@ -2,3 +2,24 @@ extends layout
 block variables
   - var pageName = 'Services'
 block content
+  header.services__header
+    .container
+      svg.icon.services__header--icon: use(xlink:href="#serv_1")
+      h1
+        svg.icon: use(xlink:href="#slash_3")
+        span Сваи Буронабивные<br>Техника bower
+  section.services__about: .container
+    .row
+      .col.md-8.lg-7.off-lg-1: .services__about--text
+        p Специалистами  «FORATECO» успешно применяется технология устройства буронабивных свай диаметром до 1200 мм и глубиной до 30 метров в различных грунтах, в том числе в увлажненных грунтах.
+        p Возведение фундаментов с применением буронабивных свай позволяет вести строительство в местах большого сосредоточения вертикальных и горизонтальных грунтовых нагрузок со сложными инженерно-геологическими условиями, а также в условиях плотной городской застройки, в близи существующих зданий и сооружений в которых могут возникнуть деформации при применении обычных набивных свай.
+        p Буронабивные сваи выполняются путем бурения скважины под защитой инвенторных обсадных труб, что исключает осыпание стенок и деформацию грунтов. Изготавливается арматурный каркас, который мастируется в пробуренную скважину и укладывается бетон.
+        p На буронабивных сваях SRL «FORATECO» в Кишиневе построены METRO Cash&Carry 1, жилой комплекс «Валя Трандафирилор», жил. комплекс по ул. Мирча чел Бэтрын множество коммерческих, офисных помещений и жилых домов.
+      .col.md-4: img.services__about--image(src="img/service_about.png", alt="")
+
+  section.services__descrition: .container
+    -for(i=1;i<=10;i++)
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium ipsum aperiam laborum nostrum aliquam quas inventore saepe deleniti neque, molestiae dolore minus ipsam placeat repudiandae itaque dolores. Natus, pariatur.
+
+  -for(i=1;i<=100;i++)
+    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium ipsum aperiam laborum nostrum aliquam quas inventore saepe deleniti neque, molestiae dolore minus ipsam placeat repudiandae itaque dolores. Natus, pariatur.

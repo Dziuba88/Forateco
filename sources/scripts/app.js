@@ -3342,7 +3342,7 @@ $.get('img/sprite.svg', function(data) {
 })(jQuery);
 
 $(document).on('scroll', function() {
-  $(document).scrollTop() >= 100 ? $('.navbar').addClass('sticky') : $('.navbar').removeClass('sticky');
+  $(document).scrollTop() >= 1 ? $('.navbar').addClass('sticky') : $('.navbar').removeClass('sticky');
 });
 
 $(document).ready(function() {
