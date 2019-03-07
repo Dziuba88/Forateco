@@ -56,4 +56,18 @@ $(document).ready(function() {
       }
     }
   });
+
+  $('.navbar--toggle').click(function(e) {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $('.mainmenu').removeClass('show');
+    } else {
+      $(this).addClass('active');
+      $('.mainmenu').addClass('show');
+    }
+  });
+  $('.navbar--toggle').blur(function(e) {
+    $(this).removeClass('active');
+    $('.mainmenu').removeClass('show');
+  });
 });

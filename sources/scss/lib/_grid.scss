@@ -2,7 +2,7 @@ $columns: 12 !default;
 $gutter: 30px !default;
 
 $mobile-max: 768px !default; // Set xs breakpoint's max width
-$tablet-max: 970px !default; // Set md breakpoint's max width
+$tablet-max: 1000px !default; // Set md breakpoint's max width
 $desktop-max: 1200px !default; // Set lg breakpoint's max width
 
 $tablet-start: ($mobile-max + 1); // Generate sm breakpoint's min width
@@ -69,13 +69,13 @@ $lagre-start: ($desktop-max + 1); // Generate xl breakpoint's min width
   padding: 0 ($gutter / 2);
 
   @include large {
-    width: $desktop-max;
+    width: 1170px;
   }
   @include desktop {
-    width: $tablet-max;
+    width: 970px;
   }
   @include tablet {
-    width: $mobile-max;
+    width: 720px;
   }
   @include mobile {
     width: 100%;

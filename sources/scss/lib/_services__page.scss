@@ -45,6 +45,19 @@
     height: 140px;
     color: #ffffff;
   }
+
+  @include desktop-down {
+    padding: 90px 0;
+  }
+  @include tablet-down {
+    margin-top: 60px;
+  }
+  @include mobile {
+    padding: 60px 0;
+    h1 {
+      font-size: 24px;
+    }
+  }
 }
 .services__about {
   padding: 60px 0;
@@ -63,6 +76,27 @@
   &--image {
     display: block;
     margin-bottom: -190px;
+  }
+
+  @include tablet-down {
+  }
+  @include mobile {
+    position: relative;
+    overflow: hidden;
+
+    &--text {
+      position: relative;
+      z-index: 2;
+    }
+
+    &--image {
+      position: absolute;
+      z-index: 1;
+      bottom: 30px;
+      margin: 0;
+      opacity: 0.25;
+      right: -50%;
+    }
   }
 }
 .services__descrition {
@@ -165,6 +199,29 @@
           //opacity: 0.2;
         }
       }
+    }
+  }
+
+  @include tablet-down {
+    &--gallery {
+      a {
+        width: 33.3333333333333%;
+      }
+    }
+  }
+  @include mobile {
+    padding: 30px 0;
+
+    h2 {
+      font-size: 24px;
+    }
+    &--gallery {
+      a {
+        width: 50%;
+      }
+    }
+    &--text {
+      margin-bottom: 30px;
     }
   }
 }

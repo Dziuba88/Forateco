@@ -145,7 +145,7 @@
     margin-top: -130px;
 
     .intro--text {
-      svg {
+      .icon {
         display: block;
         width: 163px;
         height: 16px;
@@ -163,6 +163,107 @@
     .intro--image {
       margin-top: -60px;
       padding-left: 30px;
+    }
+  }
+
+  @include desktop-down {
+    padding-top: 120px;
+    h1 {
+      text-align: center;
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    &--intro {
+      margin-top: 0;
+
+      .intro--text {
+        text-align: center;
+        margin-bottom: 30px;
+
+        .icon {
+          margin: 0 auto 30px;
+        }
+      }
+
+      .intro--image {
+        margin: 0;
+        padding: 0;
+
+        img {
+          display: block;
+          width: 115%;
+        }
+      }
+    }
+
+    .link.top {
+      bottom: 580px;
+      left: 380px;
+    }
+    .link.left {
+      bottom: 410px;
+      left: 60px;
+    }
+    .link.center {
+      bottom: 320px;
+      left: 320px;
+    }
+    .link.right {
+      bottom: 330px;
+      left: 800px;
+    }
+    .link.bottom {
+      bottom: 180px;
+      left: 650px;
+    }
+  }
+
+  @include tablet-down {
+    text-align: center;
+    padding-top: 160px;
+    .link {
+      display: none;
+    }
+
+    h1 {
+      display: inline-block;
+      //color: #ffffff;
+      box-shadow: 0 0 5px rgba(#2d2a26, 0.15);
+      font-size: 50px;
+      background-color: rgba(#fff, 0.75);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    &--intro {
+      padding-top: 15%;
+      .intro--image {
+        position: absolute;
+        z-index: -1;
+        bottom: -10px;
+        left: 0;
+      }
+
+      .intro--text {
+        background-color: #ffffff;
+        padding: 30px 15px 15px;
+        margin: 0 -15px;
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 90px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    &--intro {
+      padding-top: 35%;
+      .intro--image {
+        bottom: 40%;
+      }
     }
   }
 }
@@ -271,6 +372,23 @@
   .row {
     justify-content: center;
   }
+
+  @include mobile {
+    padding: 30px 0;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    &--item {
+      max-width: 220px;
+      margin: 0 auto 30px;
+
+      .title {
+        font-size: 14px;
+      }
+    }
+  }
 }
 .main__about {
   position: relative;
@@ -367,6 +485,33 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  @include mobile {
+    &--start,
+    &--stops {
+      display: none;
+    }
+
+    h2 {
+      font-size: 24px;
+      padding-top: 30px;
+      text-align: center;
+
+      .icon {
+        margin: 15px auto 30px;
+      }
+    }
+
+    p {
+      margin: 0 0 30px;
+      padding: 0;
+      text-align: center;
+    }
+    &--brand img {
+      width: 80px;
+      padding: 0 auto 30px;
     }
   }
 }
@@ -506,6 +651,13 @@
           right: -30px;
         }
       }
+    }
+  }
+
+  @include mobile {
+    padding: 30px 0;
+    h2 {
+      font-size: 24px;
     }
   }
 }
