@@ -122,6 +122,7 @@
     padding: 0;
     transition: 0.15s linear;
     display: none;
+    cursor: pointer;
 
     &.active {
       color: #ff9f1a;
@@ -152,7 +153,6 @@
       right: 0;
       justify-content: space-around;
       box-shadow: 0 3px 3px rgba(#000000, 0.15);
-      border-bottom: 2px solid #ff9f1a;
       transform: scaleY(0) translateY(-15px);
       opacity: 0;
       transform-origin: top center;
@@ -173,20 +173,29 @@
     .mainmenu {
       display: block;
       margin-top: 1px;
+      overflow: hidden;
 
       &__item a {
+        color: #2d2a26;
         border-bottom: 1px solid rgba(#2d2a26, 0.15);
-        &:last-child {
-          border-bottom: none;
+        padding: 10px 30px !important;
+      }
+      &__item:last-child a {
+        border-bottom: none;
+      }
+      &__item a:hover {
+        color: #2d2a26;
+        background-color: rgba(#2d2a26, 0.05);
+        &:after {
+          display: none;
         }
       }
       &__item.current a {
-        &:before {
-          display: none;
-        }
-        border-bottom: 1px solid rgba(#2d2a26, 0.15);
         background-color: #ff9f1a;
         color: #ffffff;
+        &:after {
+          display: none;
+        }
       }
     }
   }
