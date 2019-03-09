@@ -17,7 +17,15 @@ html(lang="zxx")
         ul.mainmenu
           li.mainmenu__item(class=pageName === 'Main' ? 'current' : ''): a(href="001_main.html") Главная
           li.mainmenu__item(class=pageName === 'About' ? 'current' : ''): a(href="") О компании
-          li.mainmenu__item(class=pageName === 'Services' ? 'current' : ''): a(href="002_services.html") Услуги
+          li.mainmenu__item.dropdown(class=pageName === 'Services' ? 'current' : '')
+            a.dropdown--toggle(data-toggle="dropdown")
+              span Услуги
+              svg.icon: use(xlink:href="#caret")
+            .dropdown--menu: ul
+              li(): a(href="002_services.html") Сваи Буронабивные ZIL
+              li(): a(href="002_services.html") Сваи Буронабивные BOWER
+              li.active: a(href="002_services.html") МикроСваи и Анкера
+              li(): a(href="002_services.html") Артезианскае скважины
           li.mainmenu__item(class=pageName === 'Contacts' ? 'current' : ''): a(href="") Контакты
       .navbar__lang: a(href="", title="In Romana") Ro
     block content

@@ -57,17 +57,17 @@ $(document).ready(function() {
     }
   });
 
-  $('.navbar--toggle').click(function(e) {
-    if ($(this).hasClass('active')) {
-      $(this).removeClass('active');
-      $('.mainmenu').removeClass('show');
+  $(document).on('click', function(event) {
+    if (event.target.closest('.navbar--toggle') || event.target.closest('.mainmenu > .dropdown--toggle')) {
+      event.stopPropagation();
+
+      if (event.target.closest('.navbar--toggle')) {
+        $('.navbar--toggle').toggleClass('active');
+        $('.mainmenu').toggleClass('show');
+      }
     } else {
-      $(this).addClass('active');
-      $('.mainmenu').addClass('show');
+      $('.navbar--toggle').removeClass('active');
+      $('.mainmenu').removeClass('show');
     }
-  });
-  $('.navbar--toggle').blur(function(e) {
-    $(this).removeClass('active');
-    $('.mainmenu').removeClass('show');
   });
 });
